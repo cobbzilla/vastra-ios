@@ -11,6 +11,7 @@ where:
  * UUID is the value of "uuid" field in JSON, always present
 
 Generate UUID upon object creation using standard UUIDv4 algorithm.
+
 Generate ctime upon object creation, all of the time-related fields above are based on this ctime.
 
 ```javascript
@@ -37,6 +38,7 @@ where:
  * UUID is the value of "uuid" field in JSON, always present
 
 Generate UUID upon object creation using standard UUIDv4 algorithm.
+
 Generate ctime upon object creation, all of the time-related fields above are based on this ctime.
 
 
