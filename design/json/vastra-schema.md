@@ -8,7 +8,7 @@ where:
  * DD is 2-digit day of month
  * HH is 2-digit hour using 24-hour clock
  * mm is 2-digit minutes
- * UUID is the vlaue of "uuid" field in JSON, always present
+ * UUID is the value of "uuid" field in JSON, always present
 
 Generate UUID upon object creation using standard UUIDv4 algorithm.
 Generate ctime upon object creation, all of the time-related fields above are based on this ctime.
