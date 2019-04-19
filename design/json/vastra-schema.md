@@ -1,6 +1,6 @@
 # workout JSON object storage
 ## Description: a workout is a single workout session
-Save under `workouts/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss[_name]_UUID.json`
+Save under `workouts/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss_UUID.json`
 where:
  * YYYY is 4-digit year
  * MM is 2-digit month
@@ -8,7 +8,6 @@ where:
  * HH is 2-digit hour using 24-hour clock
  * mm is 2-digit minutes
  * ss is 2-digit seconds
- * name is the value of "name" field in JSON, if present
  * UUID is the vlaue of "uuid" field in JSON, always present
 
 Generate UUID upon object creation using standard UUIDv4 algorithm.
@@ -26,7 +25,7 @@ Generate UUID upon object creation using standard UUIDv4 algorithm.
 
 # workout_data JSON object storage
 ## Description: a single data point that comprises a workout
-Save under `workouts/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss[_name]/data/YYYYMMDDHHmmss_UUID.json`
+Save under `workouts/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss/data/YYYYMMDDHHmmss_UUID.json`
 where:
  * YYYY is 4-digit year
  * MM is 2-digit month
@@ -34,7 +33,6 @@ where:
  * HH is 2-digit hour using 24-hour clock
  * mm is 2-digit minutes
  * ss is 2-digit seconds
- * name is the value of "name" field in JSON, if present
  * UUID is the vlaue of "uuid" field in JSON, always present
 
 Generate UUID upon object creation using standard UUIDv4 algorithm.
