@@ -12,6 +12,7 @@ where:
  * UUID is the vlaue of "uuid" field in JSON, always present
 Generate UUID upon object creation using standard UUIDv4 algorithm.
 
+
     {
       "uuid": "VARCHAR(50)",  // UUIDv4
       "name": "VARCHAR(500)", // optional name if provided when saved
@@ -33,6 +34,7 @@ where:
  * name is the value of "name" field in JSON, if present
  * UUID is the vlaue of "uuid" field in JSON, always present
 Generate UUID upon object creation using standard UUIDv4 algorithm.
+
 
     {
       "uuid": "VARCHAR(50)",   // UUIDv4
