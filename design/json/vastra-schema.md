@@ -10,6 +10,7 @@ where:
  * ss is 2-digit seconds
  * name is the value of "name" field in JSON, if present
  * UUID is the vlaue of "uuid" field in JSON, always present
+
 Generate UUID upon object creation using standard UUIDv4 algorithm.
 
 
@@ -35,6 +36,7 @@ where:
  * ss is 2-digit seconds
  * name is the value of "name" field in JSON, if present
  * UUID is the vlaue of "uuid" field in JSON, always present
+
 Generate UUID upon object creation using standard UUIDv4 algorithm.
 
 
