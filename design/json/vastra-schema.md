@@ -13,6 +13,7 @@ where:
 Generate UUID upon object creation using standard UUIDv4 algorithm.
 
 
+```javascript
         {
           "uuid": "VARCHAR(50)",  // UUIDv4
           "name": "VARCHAR(500)", // optional name if provided when saved
@@ -20,6 +21,7 @@ Generate UUID upon object creation using standard UUIDv4 algorithm.
           "end_time": BIGINT,     // workout end time (time of last data point) in UNIX epoch time
           "ctime": BIGINT         // creation time (time this record was saved) in UNIX epcoh time
         }
+```
 
 # workout_data JSON object storage
 ## Description: a single data point that comprises a workout
@@ -36,6 +38,7 @@ where:
 Generate UUID upon object creation using standard UUIDv4 algorithm.
 
 
+```javascript
         {
           "uuid": "VARCHAR(50)",   // UUIDv4
           "latitude": DOUBLE,      // latitude of data point
@@ -46,3 +49,4 @@ Generate UUID upon object creation using standard UUIDv4 algorithm.
           "ew_direction": DOUBLE,  // East/West unit vector for velocity. 1 is due East, -1 is due West
           "ctime": BIGINT          // creation time of this data point
         }
+```
