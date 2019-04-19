@@ -1,6 +1,6 @@
 # workout JSON object storage
 ## Description: a workout is a single workout session
-Save under `workouts/YYYY/ET_YYYYMMDD_HHmmSS_UUID.json`
+Save under `workouts/YYYY/ET_YYYYMMDD_HHmm_UUID.json`
 where:
  * ET is the epoch time in milliseconds, which always monotonically increases
  * YYYY is 4-digit year
@@ -8,7 +8,6 @@ where:
  * DD is 2-digit day of month
  * HH is 2-digit hour using 24-hour clock
  * mm is 2-digit minutes
- * ss is 2-digit seconds
  * UUID is the vlaue of "uuid" field in JSON, always present
 
 Generate UUID upon object creation using standard UUIDv4 algorithm.
@@ -26,7 +25,7 @@ Generate ctime upon object creation, all of the time-related fields above are ba
 
 # workout_data JSON object storage
 ## Description: a single data point that comprises a workout
-Save under `workouts/YYYY/ET_YYYYMMDD_HHmmss_UUID/ET_HHmmss_UUID.json`
+Save under `workouts/YYYY/ET_YYYYMMDD_HHmm_UUID/ET_HHmmss_UUID.json`
 where:
  * ET is the epoch time in milliseconds, which always monotonically increases
  * YYYY is 4-digit year
