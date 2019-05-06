@@ -7,3 +7,4 @@ dependency-reduced-pom.xml
 velocity.log
 *~
 build.log
+*.DS_Store

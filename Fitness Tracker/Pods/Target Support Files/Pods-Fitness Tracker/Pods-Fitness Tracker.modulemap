@@ -1,0 +1,6 @@
+framework module Pods_Fitness_Tracker {
+  umbrella header "Pods-Fitness Tracker-umbrella.h"
+
+  export *
+  module * { export * }
+}
