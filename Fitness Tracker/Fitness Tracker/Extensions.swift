@@ -9,54 +9,75 @@
 import Foundation
 import UIKit
 
-
-extension UIViewController {
-    
-    func showInputDialog(title:String? = nil,
-                         subtitle:String? = nil,
-                         actionTitle:String? = "Add",
-                         cancelTitle:String? = "Cancel",
-                         inputPlaceholder:String? = nil,
-                         inputKeyboardType:UIKeyboardType = UIKeyboardType.default,
-                         cancelHandler: ((UIAlertAction) -> Swift.Void)? = nil,
-                         actionHandler: ((_ text: String?) -> Void)? = nil) {
-        
-        let alert = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
-        
-        alert.addTextField { (textField:UITextField) in
-            textField.placeholder = inputPlaceholder
-            textField.keyboardType = inputKeyboardType
+@IBDesignable extension UIButton {
+    // Set/Get the border width of button
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
         }
-        alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { (action:UIAlertAction) in
-            guard let textField =  alert.textFields?.first else {
-                actionHandler?(nil)
-                return
-            }
-            actionHandler?(textField.text)
-        }))
-        alert.addAction(UIAlertAction(title: cancelTitle, style: .cancel, handler: cancelHandler))
+        get {
+            return layer.borderWidth
+        }
+    }
+    // Set/Get corner radius of the button
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    // Set/Get border color of the button
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    // Set/Get shadow radius of the button
+    @IBInspectable var shadowRadius: CGFloat {
         
-        self.present(alert, animated: true, completion: nil)
+        set {
+            layer.shadowRadius = newValue
+        }
+        get {
+            return layer.shadowRadius
+        }
     }
-}
-
-extension UIImageView {
-    func dowloadFromServer(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
-        contentMode = mode
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
-            DispatchQueue.main.async() {
-                self.image = image
-            }
-            }.resume()
+    // Set/Get shadow offset of the button
+    @IBInspectable var shadowOffset: CGSize {
+        set {
+            layer.shadowOffset = newValue
+        }
+        get {
+            return layer.shadowOffset
+        }
     }
-    func dowloadFromServer(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
-        dowloadFromServer(url: url, contentMode: mode)
+    // Set/Get shadow color of the button
+    @IBInspectable var shadowColor: UIColor? {
+        set {
+            guard let uiColorValue = newValue else { return }
+            layer.shadowColor = uiColorValue.cgColor
+        }
+        get {
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+    // Set/Get shadow opacity of the button
+    @IBInspectable var shadowOpacity: Float {
+        
+        set {
+            layer.shadowOpacity = newValue
+        }
+        get {
+            return layer.shadowOpacity
+        }
+        
     }
 }

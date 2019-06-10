@@ -8,4 +8,5 @@ target 'Fitness Tracker' do
   # Pods for Fitness Tracker
 
   pod 'Mapbox-iOS-SDK', '~> 4.10'
+  pod 'PopupDialog', '~> 1.0'
 end
